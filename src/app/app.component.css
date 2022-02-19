@@ -1,0 +1,13 @@
+mat-card{
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    text-size-adjust: 40px;
+}
+.h1{
+    align-items: center;
+}
+.container h2 {
+    text-align: center;
+    margin: 25px auto;
+  }

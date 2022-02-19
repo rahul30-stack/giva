@@ -1,0 +1,29 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Users List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let Users of Users; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveUsers(Users, i)"
+        >
+          {{ Users.name }}
+          {{Users.mail}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentUsers">
+        <app-users-details
+          (refreshList)="refreshList()"
+          [Users]="currentUsers"
+        ></app-users-details>
+      </div>
+  
+      <div *ngIf="!currentUsers">
+        <br />
+        <p></p>
+      </div>
+    </div>
+  </div>
